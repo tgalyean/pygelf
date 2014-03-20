@@ -6,10 +6,12 @@ import pycurl
 
 class Client():
     def send(self,message,facility):
+        # graylog instance hostname / Gelf HTTP port
         hostname = config.get('hostname')
         port = config.get('port')
         endpoint = 'http://' + hostname + ":" + port + "/gelf"
-        headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+    
+        # create json object to send to Graylog
         content = {
             "short_message": message, 
             "host": socket.gethostname(), 
@@ -22,6 +24,7 @@ class Client():
             c.setopt(pycurl.HTTPHEADER, ['Accept: application/json', 'Content-Type: application/json'])
             c.setopt(pycurl.POST, 1)
             c.setopt(pycurl.POSTFIELDS, json.dumps(content))
+            # force HTTP 1.0 to bypass KeepAlive (Compliments of Lennart Koopmann)
             c.setopt(pycurl.HTTP_VERSION, pycurl.CURL_HTTP_VERSION_1_0)
             c.perform()
             c.close()
