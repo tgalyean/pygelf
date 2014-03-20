@@ -9,7 +9,7 @@ setup(
     description='Python Gelf HTTP libary',
     author='Tim Galyean',
     author_email='tim.galyean@gmail.com',
-    license='BSD License',
+    license='GPL V2',
     packages=find_packages(),
     include_package_data=True,
     install_requires = ['pycurl']
