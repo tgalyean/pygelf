@@ -30,4 +30,16 @@ hostname = prodgraylog.mydomain.com
 port = 12201
 ```
 
+Example Usage:
+```
+#!/usr/bin/env python
+from pygelf import Client
+
+client = Client()
+
+try:
+    ...something..
+except Error as e:
+    client.send(e,"local1")
+```
 
