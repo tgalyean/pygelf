@@ -1,5 +1,7 @@
-pygelf - Python library for sending Graylog2 events over the Gelf HTTP input
+pygelf 
 ======
+pygelf - Python library for sending Graylog2 events over the Gelf HTTP input
+
 
 Install
 ```
