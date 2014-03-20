@@ -10,6 +10,7 @@ easy_install pygelf
 ```
 
 Configuration
+
 In the directory your code will run in you will need to create a config.ini containing your graylog instance details.
 
 The global parameter allows you to create one config file containing all environments (dev/test/prod) while maintaining a single config.ini.
