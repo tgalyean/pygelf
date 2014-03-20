@@ -6,7 +6,7 @@ setup(
 
     name='pygelf',
     version='0.1',
-    description='Python Gelf HTTP libary',
+    description='Python library for sending events to Graylog2 over the Gelf HTTP Input',
     author='Tim Galyean',
     author_email='tim.galyean@gmail.com',
     license='GPL V2',
