@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 import threading
-import requests
-import time
 import datetime
 import pygelf
 
